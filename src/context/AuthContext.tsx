@@ -1,8 +1,8 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import { AuthChangeEvent, Session } from '@supabase/supabase-js';
 import { AuthProviderProps, AuthContextInterface, supabase } from '../';
 
-const AuthContext = createContext<AuthContextInterface['user']>(null);
+export const AuthContext = createContext<AuthContextInterface['user']>(null);
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [user, setUser] = useState<AuthContextInterface['user']>(null);
@@ -24,14 +24,4 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       {children}
     </AuthContext.Provider>
   );
-}
-
-const useUserAuth = () => {
-  const user = useContext(AuthContext);
-  if (!user) {
-    throw new Error('useUserAuth debe ser utilizado dentro de un AuthProvider');
   }
-  return user;
-};
-
-export default useUserAuth;

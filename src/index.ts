@@ -1,6 +1,6 @@
 export { default as App } from './App';
 export * from './constants/constants';
-export { default as AuthContext } from './context/AuthContext';
+export * from './context/AuthContext';
 export * from './interfaces/auth/AuthContext.interface';
 export * from './interfaces';
 export * from './main';
@@ -8,3 +8,4 @@ export * from './styles/breackpoint';
 export * from './styles/themes';
 export * from './styles/variables';
 export * from './supabase/supabase.config';
+export * from './hooks/auth/useAuth';

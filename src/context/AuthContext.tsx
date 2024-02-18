@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from "react";
 import { AuthChangeEvent, Session } from '@supabase/supabase-js';
-import { AuthProviderProps, AuthContextInterface, supabase } from '../';
+import { AuthProviderProps, AuthContextInterface, supabase } from '..';
 
 export const AuthContext = createContext<AuthContextInterface['user']>(null);
 

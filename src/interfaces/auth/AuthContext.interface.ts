@@ -8,3 +8,7 @@ export interface AuthContextInterface {
 export interface AuthProviderProps {
   children: ReactNode;
 }
+
+export interface AuthLayoutInterface {
+  children: ReactNode;
+}

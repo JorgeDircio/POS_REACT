@@ -1,9 +1,20 @@
-import { AppRouter } from '.'
+import { useState } from 'react'
+import { AppRouter, Container, MenuHamburger, Sidebar, ThemeContextProvider } from '.'
 
 function App() {
 
+  const [openSideBar, setOpenSideBar] = useState<boolean>(false);
+
   return (
-    <AppRouter/>
+    <ThemeContextProvider>
+      <Container className={openSideBar ? 'active' : ''}>
+        <section className='contentSideBar'><Sidebar state={openSideBar} setState={setOpenSideBar} /></section>
+        <section className='contentMenuHamburger'><MenuHamburger /></section>
+        <section className='contentRoutes'>
+          <AppRouter />
+        </section>
+      </Container>
+    </ThemeContextProvider>
   )
 }
 

@@ -37,7 +37,7 @@ export const LinksArray: LinkItem[] = [
   {
     label: 'Home',
     icon: <AiOutlineHome />,
-    to: '/',
+    to: '/home',
   },
   {
     label: 'Kardex',
@@ -59,7 +59,6 @@ export const SecondarylinksArray: LinkItem[] = [
   },
 ];
 
-// temas
 interface TemaData {
   icono: string;
   descripcion: string;
@@ -76,7 +75,6 @@ export const TemasData: TemaData[] = [
   },
 ];
 
-// data configuracion
 interface ModuloConfiguracion {
   title: string;
   subtitle: string;
@@ -97,10 +95,8 @@ export const DataModulosConfiguracion: ModuloConfiguracion[] = [
     icono: 'https://i.ibb.co/5vgZ0fX/hombre.png',
     link: '/configurar/usuarios',
   },
-  // ... Otros elementos
 ];
 
-// tipo usuario
 interface TipoUserData {
   descripcion: string;
   icono: string;
@@ -117,7 +113,6 @@ export const TipouserData: TipoUserData[] = [
   },
 ];
 
-// tipo doc
 export const TipoDocData: TipoUserData[] = [
   {
     descripcion: 'Dni',

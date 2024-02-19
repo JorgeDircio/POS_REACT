@@ -1,12 +1,15 @@
-import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
-const Home = lazy(() => import('../pages/Home'));
+import { DashboardRoutes } from "../Dashboard/routes/DashboardRoutes";
 
 export function AppRouter() {
 
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+
+      {/* Rutas Publicas */}
+
+      {/* Rutas protegidas*/}
+      <Route path="/*" element={<DashboardRoutes />} />
     </Routes>
   )
 }
